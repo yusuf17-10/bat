@@ -25,13 +25,7 @@ function setup() {
       maxDrops.push(new Drop (random(0,400),random(0,400)));
   }
 
- 
-
 }
-
-
-
-
 
 
 
@@ -43,6 +37,10 @@ function draw() {
 
   man.display();
 
+  
+  for(var i=0; i<maxDrops; i++){
+      maxDrops[i].display();
+   }
 
     /*if(frameCount% 60===0){
       var r = Math.round(random(50,550));
