@@ -7,7 +7,7 @@ const Constraint = Matter.Constraint;
 var particle;
 var rain=[];
 
-var maxDrops=100;
+var maxDrops=500;
 
 var man;
 
@@ -22,7 +22,7 @@ function setup() {
   man = new Umbrella(200,550,150,300);
  
   for(var i=0; i<maxDrops; i++){
-      maxDrops.push(new Drop (random(0,400),random(0,400)));
+      rain.push(new Drop (random(0,400),random(0,400)));
   }
 
 }
@@ -39,7 +39,7 @@ function draw() {
 
   
   for(var i=0; i<maxDrops; i++){
-      maxDrops[i].display();
+      rain[i].display();
    }
 
     /*if(frameCount% 60===0){
