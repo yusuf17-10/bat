@@ -39,13 +39,14 @@ function draw() {
 
   
   for(var i=0; i<maxDrops; i++){
-      rain[i].display();
+      
    }
 
-    /*if(frameCount% 60===0){
-      var r = Math.round(random(50,550));
-      ball.push(new Ball(r,0,10));
-    }*/
+   if(frameCount% 60===0){
+      var rain = Math.round(random(50,550));
+      rain.push(new Drop(20,0,10));
+      rain[i].display();
+    }
 }
 
 
