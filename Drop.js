@@ -9,9 +9,7 @@ class Drop {
       this.body = Bodies.circle(x,y,1.8,options);
       World.add(world, this.body);
       
-      if(this.body.position.y > height){
-          Matter.Body.setPosition(this.body,{x:random(0,400),y:random(0,400)});
-      }
+      
       
     }
     display(){
@@ -21,6 +19,8 @@ class Drop {
       fill("blue");
       ellipse(pos.x,pos.y, this.radius, this.radius);
       pop();
-      
+      if(this.body.position.y > height){
+        Matter.Body.setPosition(this.body,{x:random(0,400),y:random(0,400)});
+    }
     }
   };

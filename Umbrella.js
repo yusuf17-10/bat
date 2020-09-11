@@ -1,11 +1,11 @@
 class Umbrella {
-    constructor(x,y,width,height) {
+    constructor(x,y) {
       var options = {
           isStatic: true
       }
-      this.body = Bodies.rectangle(x, y, width, height, options);
-      this.width = width;
-      this.height = height;
+      this.radius = 180;
+      this.body = Bodies.circle(x,y,1.8,options);
+      World.add(world, this.body);
       this.image = loadImage("Umbrella4.png-removebg-preview.png");
       World.add(world, this.body);
       
@@ -14,9 +14,14 @@ class Umbrella {
     display(){
       var pos =this.body.position;
       push();
-      imageMode(CENTER);
-      image(this.image, 200, 500, this.width, this.height);
+      imageMode(RADIUS);
+      
+      image(this.image,pos.x,pos.y, this.radius, this.radius);
       pop();
       
     }
   };
+
+
+  /*imageMode(CENTER);
+      image(this.image, 200, 500, this.width, this.height);*/
