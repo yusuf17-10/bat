@@ -19,7 +19,7 @@ function setup() {
   world = engine.world;
 
  
-  man = new Umbrella(100,420,150,300);
+  man = new Umbrella(200,500);
  
   for(var i=0; i<maxDrops; i++){
       rain.push(new Drop (random(0,400),random(0,400)));
